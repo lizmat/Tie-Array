@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lizmat/Tie-Array.svg?branch=master)](https://travis-ci.org/lizmat/Tie-Array)
+
 NAME
 ====
 

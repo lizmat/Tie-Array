@@ -1,17 +1,20 @@
 use v6.c;
 
-class Tie::Array:ver<0.0.1> {
+class Tie::Array:ver<0.0.2> {
     method EXTEND($) { }
     method DESTROY() { }
+    method CLEAR() { self.STORESIZE(0) }
 
     method UNSHIFT(*@args) { self.SPLICE(0,0,@args) }
-    method SHIFT()  is raw { self.SPLICE(0,1)       }
-    method CLEAR()         { self.STORESIZE(0)      }
+    method SHIFT()  is raw {
+        self.FETCHSIZE
+          ?? self.SPLICE(0,1).AT-POS(0)
+          !! Nil
+    }
 
     method PUSH(*@args) {
         my int $sz = self.FETCHSIZE;
         self.STORE($sz++, @args.shift) while @args;
-        $sz
     }
     method POP() is raw {
         if self.FETCHSIZE -> $size {

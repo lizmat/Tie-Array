@@ -13,14 +13,14 @@ class Foo is Tie::Array {
 
     method FETCH($i)      is raw { @!tied.AT-POS($i)         }
     method STORE($i,\val) is raw { @!tied.ASSIGN-POS($i,val) }
-    method FETCHSIZE()           { say "FETCHSIZE: @!tied.elems()"; @!tied.elems              }
+    method FETCHSIZE()           { @!tied.elems              }
     method STORESIZE(\size) {
-        my \end = @!tied.end;
-        if size > end {
+        my \elems = @!tied.elems;
+        if size > elems {
             @!tied.ASSIGN-POS( size - 1, Nil )
         }
-        elsif size < end {
-            @!tied.splice(size)
+        elsif size < elems {
+            @!tied.splice(size);
         }
     }
 }

@@ -1,6 +1,6 @@
 use v6.c;
 
-class Tie::Array:ver<0.0.4>:auth<cpan:ELIZABETH> {
+class Tie::Array:ver<0.0.5>:auth<cpan:ELIZABETH> {
     method EXTEND($) { }
     method DESTROY() { }
     method CLEAR() { self.STORESIZE(0) }
@@ -71,7 +71,7 @@ class Tie::Array:ver<0.0.4>:auth<cpan:ELIZABETH> {
 
 =head1 NAME
 
-Tie::Array - Implement Perl 5's Tie::Array core module
+Tie::Array - Implement Perl's Tie::Array core module
 
 =head1 SYNOPSIS
 
@@ -101,9 +101,9 @@ Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018 Elizabeth Mattijsen
+Copyright 2018-2019 Elizabeth Mattijsen
 
-Re-imagined from Perl 5 as part of the CPAN Butterfly Plan.
+Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

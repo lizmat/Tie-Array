@@ -2,6 +2,9 @@ Revision history for Tie::Array
 
 {{$NEXT}}
 
+0.0.6  2019-11-10T22:47:03+01:00
+    - Added P5tie as a dependency to fix Travis testing problems
+
 0.0.5  2019-11-10T20:05:41+01:00
     - Changed Perl 5 to Perl
 

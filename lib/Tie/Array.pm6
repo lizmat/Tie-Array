@@ -1,6 +1,6 @@
-use v6.c;
+use v6.*;
 
-class Tie::Array:ver<0.0.6>:auth<cpan:ELIZABETH> {
+class Tie::Array:ver<0.0.7>:auth<cpan:ELIZABETH> {
     method EXTEND($) { }
     method DESTROY() { }
     method CLEAR() { self.STORESIZE(0) }
@@ -71,13 +71,17 @@ class Tie::Array:ver<0.0.6>:auth<cpan:ELIZABETH> {
 
 =head1 NAME
 
-Tie::Array - Implement Perl's Tie::Array core module
+Raku port of Perl's Tie::Array module
 
 =head1 SYNOPSIS
 
+  use P5tie;
   use Tie::Array;
 
 =head1 DESCRIPTION
+
+This module tries to mimic the behaviour of Perl's C<Tie::Array> module
+as closely as possible in the Raku Programming Language.
 
 Tie::Array is a module intended to be subclassed by classes using the
 </P5tie|tie()> interface.  It depends on the implementation of methods
@@ -101,10 +105,12 @@ Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018-2019 Elizabeth Mattijsen
+Copyright 2018-2020 Elizabeth Mattijsen
 
 Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
 =end pod
+
+# vim: expandtab shiftwidth=4

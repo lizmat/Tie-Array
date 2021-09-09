@@ -2,6 +2,13 @@ Revision history for Tie::Array
 
 {{$NEXT}}
 
+0.0.8  2021-09-09T20:45:03+02:00
+    - Change file extension to .rakumod
+    - Migrate to zef ecosystem
+    - Update email address
+    - Update copyright year
+    - Update dependency
+
 0.0.7  2020-11-12T21:06:06+01:00
     - Change name of distribution
     - Force to highest possible Raku version

@@ -1,6 +1,6 @@
 use v6.*;
 
-class Tie::Array:ver<0.0.7>:auth<cpan:ELIZABETH> {
+class Tie::Array:ver<0.0.8>:auth<zef:lizmat> {
     method EXTEND($) { }
     method DESTROY() { }
     method CLEAR() { self.STORESIZE(0) }
@@ -98,14 +98,14 @@ L<P5tie>, L<Tie::StdArray>
 
 =head1 AUTHOR
 
-Elizabeth Mattijsen <liz@wenzperl.nl>
+Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/Tie-Array . Comments and
 Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018-2020 Elizabeth Mattijsen
+Copyright 2018, 2019, 2020, 2021 Elizabeth Mattijsen
 
 Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
